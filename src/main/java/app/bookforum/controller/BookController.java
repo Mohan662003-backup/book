@@ -24,7 +24,7 @@ public class BookController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/get-book/{bookId}")
+    @GetMapping("/book/{bookId}")
     public ResponseEntity<Book> getBook(@PathVariable int bookId){
         Book book = bookService.getBook(bookId);
         return book != null
